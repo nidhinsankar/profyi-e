@@ -1,104 +1,49 @@
 {
   "products": [
     {
-      "title": "Wireless Noise-Cancelling Headphones",
-      "small-description": "Premium over-ear headphones with active noise cancellation.",
-      "description": "Experience crystal-clear audio with these wireless headphones featuring advanced noise-cancellation technology, 30-hour battery life, and comfortable over-ear design.",
-      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      "category": "Electronics",
-      "price": 299.99,
-      "rating": 4.7,
-      "uuid": "a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6"
-    },
-    {
-      "title": "Smartphone X12",
-      "small-description": "Latest model smartphone with advanced camera system.",
-      "description": "Capture life's moments with stunning clarity using the X12's triple-lens camera system. Featuring a powerful processor, 5G capability, and an edge-to-edge OLED display.",
-      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80",
-      "category": "Electronics",
-      "price": 999.99,
-      "rating": 4.8,
-      "uuid": "b2c3d4e5-f6g7-h8i9-j0k1-l2m3n4o5p6q7"
-    },
-    {
-      "title": "Ergonomic Office Chair",
-      "small-description": "Comfortable chair with lumbar support for long work hours.",
-      "description": "Enhance your work-from-home setup with this ergonomic office chair. Featuring adjustable height, tilt, and armrests, with breathable mesh back for all-day comfort.",
-      "image": "https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80",
-      "category": "Furniture",
-      "price": 249.99,
-      "rating": 4.5,
-      "uuid": "c3d4e5f6-g7h8-i9j0-k1l2-m3n4o5p6q7r8"
-    },
-    {
-      "title": "4K Ultra HD Smart TV",
-      "small-description": "55-inch 4K TV with HDR and built-in streaming apps.",
-      "description": "Immerse yourself in stunning 4K resolution and vibrant colors. This smart TV comes with popular streaming apps pre-installed and voice control for easy navigation.",
-      "image": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      "category": "Electronics",
-      "price": 699.99,
-      "rating": 4.6,
-      "uuid": "d4e5f6g7-h8i9-j0k1-l2m3-n4o5p6q7r8s9"
-    },
-    {
-      "title": "Stainless Steel Kitchen Knife Set",
-      "small-description": "Professional-grade 8-piece knife set with block.",
-      "description": "Elevate your culinary skills with this premium knife set. Includes chef's knife, bread knife, utility knife, paring knife, and more, all stored in a stylish wooden block.",
-      "image": "https://images.unsplash.com/photo-1593618998160-e34014e67546?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      "category": "Home & Kitchen",
+      "title": "Wireless Bluetooth Headphones",
+      "image": "https://example.com/images/headphones.jpg",
+      "small_description": "High-quality sound with noise cancellation",
+      "description": "Experience premium audio with these wireless Bluetooth headphones. Featuring advanced noise cancellation technology, comfortable over-ear design, and long battery life for all-day listening.",
       "price": 129.99,
-      "rating": 4.8,
-      "uuid": "e5f6g7h8-i9j0-k1l2-m3n4-o5p6q7r8s9t0"
-    },
-    {
-      "title": "Wireless Gaming Mouse",
-      "small-description": "High-precision wireless mouse for gamers.",
-      "description": "Gain a competitive edge with this responsive wireless gaming mouse. Features customizable RGB lighting, programmable buttons, and up to 16,000 DPI for precise control.",
-      "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1428&q=80",
-      "category": "Electronics",
-      "price": 79.99,
       "rating": 4.5,
-      "uuid": "f6g7h8i9-j0k1-l2m3-n4o5-p6q7r8s9t0u1"
+      "category": "Electronics"
     },
     {
-      "title": "Portable Bluetooth Speaker",
-      "small-description": "Waterproof speaker with 20-hour battery life.",
-      "description": "Take your music anywhere with this rugged, waterproof Bluetooth speaker. Enjoy deep bass and clear highs for up to 20 hours on a single charge.",
-      "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      "category": "Electronics",
-      "price": 89.99,
-      "rating": 4.6,
-      "uuid": "g7h8i9j0-k1l2-m3n4-o5p6-q7r8s9t0u1v2"
+      "title": "Organic Green Tea",
+      "image": "https://example.com/images/green-tea.jpg",
+      "small_description": "100% organic, antioxidant-rich green tea",
+      "description": "Enjoy the soothing and health-boosting benefits of our premium organic green tea. Sourced from sustainable farms, this antioxidant-rich tea promotes wellness and provides a gentle energy boost.",
+      "price": 12.99,
+      "rating": 4.8,
+      "category": "Food & Beverages"
     },
     {
-      "title": "Fitness Smartwatch",
-      "small-description": "GPS-enabled smartwatch with health tracking features.",
-      "description": "Monitor your fitness goals with this advanced smartwatch. Tracks heart rate, sleep, and various workout types, with built-in GPS and smartphone notifications.",
-      "image": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80",
-      "category": "Electronics",
-      "price": 199.99,
+      "title": "Yoga Mat",
+      "image": "https://example.com/images/yoga-mat.jpg",
+      "small_description": "Non-slip, eco-friendly yoga mat",
+      "description": "Enhance your yoga practice with our premium, eco-friendly yoga mat. Made from sustainable materials, this non-slip mat provides excellent grip and cushioning for all types of yoga and floor exercises.",
+      "price": 39.99,
       "rating": 4.7,
-      "uuid": "h8i9j0k1-l2m3-n4o5-p6q7-r8s9t0u1v2w3"
+      "category": "Sports & Fitness"
     },
     {
-      "title": "Electric Coffee Grinder",
-      "small-description": "Stainless steel grinder with multiple grind settings.",
-      "description": "Enjoy freshly ground coffee every morning with this electric grinder. Features multiple grind settings for French press, drip, espresso, and more.",
-      "image": "https://images.unsplash.com/photo-1631749352438-7d576312185d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80",
-      "category": "Home & Kitchen",
-      "price": 49.99,
+      "title": "Smart Home Security Camera",
+      "image": "https://example.com/images/security-camera.jpg",
+      "small_description": "HD video with night vision and two-way audio",
+      "description": "Keep your home safe with our advanced smart security camera. Featuring 1080p HD video, night vision, two-way audio, and mobile app control, this camera provides peace of mind 24/7.",
+      "price": 79.99,
+      "rating": 4.6,
+      "category": "Home & Garden"
+    },
+    {
+      "title": "Leather Messenger Bag",
+      "image": "https://example.com/images/messenger-bag.jpg",
+      "small_description": "Stylish and durable genuine leather bag",
+      "description": "Carry your essentials in style with our genuine leather messenger bag. Featuring multiple compartments, adjustable strap, and classic design, this bag is perfect for work or casual outings.",
+      "price": 89.99,
       "rating": 4.4,
-      "uuid": "i9j0k1l2-m3n4-o5p6-q7r8-s9t0u1v2w3x4"
-    },
-    {
-      "title": "Wireless Charging Pad",
-      "small-description": "Fast-charging Qi-compatible wireless charger.",
-      "description": "Simplify your charging setup with this sleek wireless charging pad. Compatible with all Qi-enabled devices, providing fast and efficient charging.",
-      "image": "https://images.unsplash.com/photo-1626763847023-b1f3ca9fdb2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      "category": "Electronics",
-      "price": 29.99,
-      "rating": 4.3,
-      "uuid": "j0k1l2m3-n4o5-p6q7-r8s9-t0u1v2w3x4y5"
+      "category": "Fashion"
     }
   ]
 }
