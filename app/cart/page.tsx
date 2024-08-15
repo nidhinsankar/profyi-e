@@ -1,10 +1,12 @@
-import { CartViewer } from "@/components/cart-viewer";
+import { DiscountSelect } from "@/components/button/discount";
+import { CartViewer, CartViewer1 } from "@/components/cart-viewer";
 
 export const CartPage = () => {
   return (
     <div>
-      Cart page
-      <CartViewer />
+      {/* <DiscountSelect /> */}
+      <CartViewer1 />
+      {/* <CartViewer /> */}
     </div>
   );
 };
