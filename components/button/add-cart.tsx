@@ -1,9 +1,10 @@
 "use client";
 
+import { IProduct } from "@/lib/types";
 import { addCartItem } from "@/store/cartSlice";
 import { useAppDispatch, useAppSelector } from "@/store/store";
 
-export const AddCartButton = ({ data }: { data: any }) => {
+export const AddCartButton = ({ data }: { data: IProduct }) => {
   const dispatch = useAppDispatch();
   const handleAddItem = () => {
     dispatch(addCartItem({ ...data, quantity: 1 }));

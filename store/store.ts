@@ -1,12 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch, TypedUseSelectorHook, useSelector } from "react-redux";
-import { authReducer } from "@/store/authSlice";
 import cartReducer from "@/store/cartSlice";
 import paginationReducer from "@/store/paginationSlice";
 
 export const store = configureStore({
   reducer: {
-    auth: authReducer,
     cart: cartReducer,
     pagination: paginationReducer,
   },

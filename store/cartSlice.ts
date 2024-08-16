@@ -47,6 +47,7 @@ export const cartSlice = createSlice({
     },
     clearCart: (state) => {
       state.items = [];
+      state.totalItems = 0;
     },
   },
 });
@@ -64,6 +65,7 @@ export const calculateDiscountPrice = (state: RootState) => {
     (sum, product) => sum + product.price * product.quantity,
     0
   );
+  if (state.cart.items.length === 0) return 0;
   const discountPrice = state.cart.discount;
   const total = subTotal - discountPrice;
   return total;

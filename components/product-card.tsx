@@ -2,8 +2,9 @@ import Image from "next/image";
 import { AddCartButton } from "./button/add-cart";
 import RatingCard from "./rating";
 import StarRating from "./rating";
+import { IProduct } from "@/lib/types";
 
-export default function ProductCard({ product }: { product: any }) {
+export default function ProductCard({ product }: { product: IProduct }) {
   return (
     <div
       key={product?.id}
@@ -30,7 +31,7 @@ export default function ProductCard({ product }: { product: any }) {
   );
 }
 
-export const ProductCard1 = ({ product }: { product: any }) => {
+export const ProductCard1 = ({ product }: { product: IProduct }) => {
   return (
     <div className="flex flex-col relative justify-between min-h-[320px] max-h-[420px] bg-white px-2 py-4 rounded-xl hover:scale-105 transition-transform delay-150 card-border card-border-hover">
       <Image

@@ -1,6 +1,7 @@
 "use client";
 
 import { DISCOUNT_COUPON_LIST } from "@/lib/constants";
+import { IDiscountCoupon } from "@/lib/types";
 import {
   addDiscountPrice,
   calculateTotalPrice,
@@ -8,7 +9,7 @@ import {
 } from "@/store/cartSlice";
 import { useAppDispatch, useAppSelector } from "@/store/store";
 import Image from "next/image";
-import { Dispatch, SetStateAction, useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 
 export const DiscountSelect = () => {
   const total = useAppSelector(calculateTotalPrice);
@@ -33,20 +34,13 @@ export const DiscountSelect = () => {
   );
 };
 
-const DiscountCoupon = ({
+const DiscountCoupon: React.FC<IDiscountCoupon> = ({
   code,
   discountType,
   discount,
   total,
   setSelectedCoupon,
   selectedCoupon,
-}: {
-  code: string;
-  discountType: string;
-  discount: number;
-  total: number;
-  setSelectedCoupon: Dispatch<SetStateAction<string>>;
-  selectedCoupon: string;
 }) => {
   const dispatch = useAppDispatch();
   const [applied, setApplied] = useState(false);

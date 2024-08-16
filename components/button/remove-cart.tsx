@@ -3,7 +3,7 @@
 import { clearCart, removeCartItem } from "@/store/cartSlice";
 import { useAppDispatch } from "@/store/store";
 
-export const RemoveCartButton = ({ data }: { data: any }) => {
+export const RemoveCartButton = ({ data }: { data: number }) => {
   const dispatch = useAppDispatch();
   const handleAddItem = () => {
     dispatch(removeCartItem({ id: data }));

@@ -5,8 +5,9 @@ import { ProductCard1 } from "./product-card";
 import { useEffect } from "react";
 import { setTotalPages } from "@/store/paginationSlice";
 import { PaginationComponent } from "./pagination";
+import { IProduct } from "@/lib/types";
 
-export const ProductList = ({ productList }: { productList: any }) => {
+export const ProductList = ({ productList }: { productList: IProduct[] }) => {
   const dispatch = useAppDispatch();
 
   const { currentPage, itemsPerPage } = useAppSelector(
