@@ -1,12 +1,13 @@
 "use client";
 import { useAppSelector } from "@/store/store";
-import { RemoveCartButton } from "./button/remove-cart";
+import { ClearCartButton, RemoveCartButton } from "./button/remove-cart";
 import {
   DecreaseQuantityButton,
   IncreaseQuantityButton,
 } from "./button/quantity";
-import { calculateTotalPrice } from "@/store/cartSlice";
+import { calculateDiscountPrice, calculateTotalPrice } from "@/store/cartSlice";
 import Image from "next/image";
+import { DiscountSelect } from "./button/discount";
 
 export const CartViewer = () => {
   const items = useAppSelector((state) => state.cart.items);
@@ -34,7 +35,8 @@ export const CartViewer = () => {
 export const CartViewer1 = () => {
   const items = useAppSelector((state) => state.cart.items);
   const count = useAppSelector((state) => state.cart.totalItems);
-  const total = useAppSelector(calculateTotalPrice);
+  const subTotal = useAppSelector(calculateTotalPrice);
+  const discountTotal = useAppSelector(calculateDiscountPrice);
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -90,17 +92,18 @@ export const CartViewer1 = () => {
           <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
           <div className="flex justify-between mb-2">
             <span>Subtotal</span>
-            <span>${total.toFixed(2)}</span>
+            <span>${subTotal.toFixed(2)}</span>
           </div>
+
+          {items.length > 0 && <DiscountSelect />}
+
           <div className="border-t pt-2 mt-2">
             <div className="flex justify-between font-semibold">
               <span>Total</span>
-              <span>${total.toFixed(2)}</span>
+              <span>${discountTotal.toFixed(2)}</span>
             </div>
           </div>
-          <button className="w-full bg-blue-600 text-white py-2 rounded-md mt-4 hover:bg-blue-700 transition duration-300">
-            Proceed to Checkout
-          </button>
+          <ClearCartButton />
         </div>
       </div>
     </div>

@@ -4,17 +4,12 @@ import { RootState } from "./store";
 export interface iCartState {
   totalItems: number;
   items: any[];
-  totalPrice: number;
   discount: number;
-  discountEnabled: boolean;
 }
-
 const initialState: iCartState = {
   items: [],
   totalItems: 0,
-  totalPrice: 0,
   discount: 0,
-  discountEnabled: false,
 };
 
 export const cartSlice = createSlice({
@@ -24,18 +19,10 @@ export const cartSlice = createSlice({
     addCartItem: (state, action) => {
       state.items.push(action.payload);
       state.totalItems = state.items.length;
-      state.totalPrice = state.items.reduce(
-        (sum, product) => sum + product.price,
-        0
-      );
     },
     removeCartItem: (state, action) => {
       state.items = state.items.filter((item) => item.id !== action.payload.id);
       state.totalItems = state.items.length;
-      state.totalPrice = state.items.reduce(
-        (sum, product) => sum + product.price,
-        0
-      );
     },
     increaseQuantity: (state, action) => {
       const product = state.items.find((item) => item.id === action.payload.id);
@@ -54,16 +41,25 @@ export const cartSlice = createSlice({
     },
     addDiscountPrice: (state, action) => {
       state.discount = action.payload.amount;
-      state.discountEnabled = true;
     },
     removeDiscountPrice: (state) => {
       state.discount = 0;
-      state.discountEnabled = false;
+    },
+    clearCart: (state) => {
+      state.items = [];
     },
   },
 });
 
 export const calculateTotalPrice = (state: RootState) => {
+  const subTotal = state.cart.items.reduce(
+    (sum, product) => sum + product.price * product.quantity,
+    0
+  );
+  return subTotal;
+};
+
+export const calculateDiscountPrice = (state: RootState) => {
   const subTotal = state.cart.items.reduce(
     (sum, product) => sum + product.price * product.quantity,
     0
@@ -79,5 +75,7 @@ export const {
   increaseQuantity,
   decreaseQuantity,
   addDiscountPrice,
+  removeDiscountPrice,
+  clearCart,
 } = cartSlice.actions;
 export default cartSlice.reducer;
