@@ -19,7 +19,7 @@ export const CartViewer = () => {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8">Your Cart</h1>
 
-      <div className="flex flex-col md:flex-row gap-8">
+      <div className="flex flex-col-reverse md:flex-row gap-8">
         {/* Cart Items */}
         <div className="md:w-2/3">
           {items.map((item) => (

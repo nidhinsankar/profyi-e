@@ -36,7 +36,7 @@ export const ProductList = ({ productList }: { productList: IProduct[] }) => {
   const currentItems = filteredItems.slice(startIndex, endIndex);
 
   return (
-    <div className="max-w-[360px] min-h-screen md:max-w-5xl mx-auto flex flex-col ">
+    <div className="w-[90%] min-h-screen md:max-w-5xl mx-auto flex flex-col sm:my-7">
       <div className="block sm:hidden my-4">
         <Search />
       </div>

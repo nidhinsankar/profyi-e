@@ -2,14 +2,22 @@
 
 import { setSearchQuery } from "@/store/paginationSlice";
 import { useAppDispatch, useAppSelector } from "@/store/store";
-import { ChangeEvent } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 
 const Search = () => {
   const dispatch = useAppDispatch();
   const searchQuery = useAppSelector((state) => state.pagination.searchQuery);
+  const [query, setQuery] = useState("");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      dispatch(setSearchQuery(query));
+    }, 300);
+    return () => clearTimeout(timer);
+  }, [query, dispatch]);
 
   const handleSearchQuery = (e: ChangeEvent<HTMLInputElement>) => {
-    dispatch(setSearchQuery(e.target.value));
+    setQuery(e.target.value);
   };
   return (
     <div>
@@ -17,9 +25,9 @@ const Search = () => {
         type="text"
         name="search"
         id="search"
-        className="w-full py-3 rounded-3xl px-3 outline-none  focus:ring-4 focus:ring-blue-400"
+        className="w-full py-3 rounded-lg px-3 outline-none border  focus:ring-4 focus:ring-blue-400"
         placeholder="search products..."
-        value={searchQuery}
+        value={query}
         onChange={handleSearchQuery}
       />
     </div>

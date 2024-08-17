@@ -15,11 +15,11 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({ categories }) => {
   };
 
   return (
-    <div className="mb-4">
+    <div className="mb-4 flex justify-end">
       <select
         value={selectedCategory}
         onChange={handleCategoryChange}
-        className="px-4 py-2 border rounded-md w-full"
+        className="px-4 py-2 border rounded-md w-full sm:w-[320px] outline-none"
       >
         <option value="">All Categories</option>
         {categories.map((category) => (

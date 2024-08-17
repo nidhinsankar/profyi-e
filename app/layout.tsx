@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "bg-dark-blue/70")}>
+      <body className={cn(inter.className)}>
         <ReduxProvider>
           <Navbar />
           <main className="max-w-5xl mx-auto pt-8">{children}</main>

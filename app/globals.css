@@ -10,6 +10,6 @@ html {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 .card-border-hover:hover {
-  border-color: #fe2322; /* Change to your desired border color */
+  border-color: #ee11ee; /* Change to your desired border color */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
