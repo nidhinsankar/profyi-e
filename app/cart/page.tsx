@@ -1,8 +1,8 @@
 import { DiscountSelect } from "@/components/button/discount";
-import { CartViewer, CartViewer1 } from "@/components/cart-viewer";
+import { CartViewer } from "@/components/cart-viewer";
 
 export const CartPage = () => {
-  return <CartViewer1 />;
+  return <CartViewer />;
 };
 
 export default CartPage;

@@ -1,7 +1,7 @@
 "use client";
 
 import { useAppDispatch, useAppSelector } from "@/store/store";
-import { ProductCard1 } from "./product-card";
+import { ProductCard } from "./product-card";
 import { useEffect } from "react";
 import { setTotalPages } from "@/store/paginationSlice";
 import { PaginationComponent } from "./pagination";
@@ -43,7 +43,7 @@ export const ProductList = ({ productList }: { productList: IProduct[] }) => {
       <CategoryFilter categories={categories} />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 ">
         {currentItems.map((product: any) => (
-          <ProductCard1 product={product} key={product.id} />
+          <ProductCard product={product} key={product.id} />
         ))}
       </div>
       <PaginationComponent />

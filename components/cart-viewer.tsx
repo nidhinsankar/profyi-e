@@ -12,29 +12,6 @@ import { DiscountSelect } from "./button/discount";
 export const CartViewer = () => {
   const items = useAppSelector((state) => state.cart.items);
   const count = useAppSelector((state) => state.cart.totalItems);
-  const total = useAppSelector(calculateTotalPrice);
-  return (
-    <div>
-      <h2>
-        total items : {count} total price = {total.toFixed(2)}
-      </h2>
-      {items.map((item) => (
-        <div>
-          <h2>{item.title}</h2>
-          <h2>{item.quantity}</h2>
-          <h2>{item.price}</h2>
-          <RemoveCartButton data={item.id} />
-          {/* <IncreaseQuantityButton data={item.id} />
-          <DecreaseQuantityButton data={item.id} /> */}
-        </div>
-      ))}
-    </div>
-  );
-};
-
-export const CartViewer1 = () => {
-  const items = useAppSelector((state) => state.cart.items);
-  const count = useAppSelector((state) => state.cart.totalItems);
   const subTotal = useAppSelector(calculateTotalPrice);
   const discountTotal = useAppSelector(calculateDiscountPrice);
 
