@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "./store";
+import { iCartItem } from "@/lib/types";
 
 export interface iCartState {
   totalItems: number;
-  items: any[];
+  items: iCartItem[];
   discount: number;
 }
 const initialState: iCartState = {

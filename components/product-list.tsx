@@ -25,7 +25,7 @@ export const ProductList = ({ productList }: { productList: IProduct[] }) => {
   const currentItems = productList.slice(startIndex, endIndex);
 
   return (
-    <div className="max-w-5xl mx-auto flex flex-col py-6">
+    <div className="max-w-[360px] min-h-screen md:max-w-5xl mx-auto flex flex-col py-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 ">
         {currentItems.map((product: any) => (
           <ProductCard1 product={product} key={product.id} />

@@ -13,6 +13,9 @@ export interface IProduct {
   };
 }
 
+export interface iCartItem extends IProduct {
+  quantity: number;
+}
 export interface IDiscountCoupon {
   code: string;
   discountType: string;

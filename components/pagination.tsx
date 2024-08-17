@@ -11,6 +11,11 @@ export const PaginationComponent = () => {
 
   const handlePageChange = (page: number) => {
     dispatch(setCurrentPage(page));
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }, 100);
   };
   const renderPageNumbers = () => {
     const pageNumbers = [];

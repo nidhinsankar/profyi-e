@@ -6,7 +6,7 @@ export const IncreaseQuantityButton = ({
   data,
   children,
 }: {
-  data: string;
+  data: number;
   children: React.ReactNode;
 }) => {
   const dispatch = useAppDispatch();
@@ -21,7 +21,7 @@ export const DecreaseQuantityButton = ({
   data,
   children,
 }: {
-  data: string;
+  data: number;
   children: React.ReactNode;
 }) => {
   const dispatch = useAppDispatch();

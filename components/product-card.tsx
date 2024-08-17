@@ -33,7 +33,7 @@ export default function ProductCard({ product }: { product: IProduct }) {
 
 export const ProductCard1 = ({ product }: { product: IProduct }) => {
   return (
-    <div className="flex flex-col relative justify-between min-h-[320px] max-h-[420px] bg-white px-2 py-4 rounded-xl hover:scale-105 transition-transform delay-150 card-border card-border-hover">
+    <div className="flex flex-col relative justify-between min-h-[320px] max-h-[420px] bg-white px-2 py-4 rounded-xl md:hover:scale-105 transition-transform delay-150 card-border card-border-hover">
       <Image
         src={product?.image}
         alt={product.title}
