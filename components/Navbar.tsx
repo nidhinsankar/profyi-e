@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Cart } from "./cart";
-import useScrollPosition from "@/hooks/useScroll";
 import { cn } from "@/lib/utils";
+import Search from "./search";
 
 export const Navbar = () => {
   return (
@@ -26,7 +26,10 @@ export const Navbar = () => {
           /> */}
         </Link>
       </div>
-      <div className="flex">
+      <div className="flex items-center">
+        <div className="hidden sm:block">
+          <Search />
+        </div>
         <Link
           href={"/cart"}
           className=" mx-2 w-14 h-14 rounded-xl flex justify-center items-center relative bg-dark-blue"
@@ -40,12 +43,6 @@ export const Navbar = () => {
           />
           <Cart />
         </Link>
-        {/* <Link
-          href={"/products"}
-          className="py-2 px-4 bg-black text-white rounded-xl"
-        >
-          products
-        </Link> */}
       </div>
     </nav>
   );

@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import ReduxProvider from "@/store/provider";
 import { cn } from "@/lib/utils";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         <ReduxProvider>
           <Navbar />
           <main className="max-w-5xl mx-auto pt-8">{children}</main>
+          <Toaster position="top-right" />
         </ReduxProvider>
       </body>
     </html>

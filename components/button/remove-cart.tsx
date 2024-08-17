@@ -2,11 +2,13 @@
 
 import { clearCart, removeCartItem } from "@/store/cartSlice";
 import { useAppDispatch } from "@/store/store";
+import toast from "react-hot-toast";
 
 export const RemoveCartButton = ({ data }: { data: number }) => {
   const dispatch = useAppDispatch();
   const handleAddItem = () => {
     dispatch(removeCartItem({ id: data }));
+    toast.error("removed from cart");
   };
   return (
     <button
@@ -23,6 +25,7 @@ export const ClearCartButton = () => {
 
   const handleClearCart = () => {
     dispatch(clearCart());
+    toast.success("Shipped successfully");
   };
 
   return (

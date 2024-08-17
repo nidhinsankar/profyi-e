@@ -6,26 +6,41 @@ import { useEffect } from "react";
 import { setTotalPages } from "@/store/paginationSlice";
 import { PaginationComponent } from "./pagination";
 import { IProduct } from "@/lib/types";
+import CategoryFilter from "./category";
+import Search from "./search";
 
 export const ProductList = ({ productList }: { productList: IProduct[] }) => {
   const dispatch = useAppDispatch();
 
-  const { currentPage, itemsPerPage } = useAppSelector(
-    (state) => state.pagination
+  const { currentPage, itemsPerPage, searchQuery, selectedCategory } =
+    useAppSelector((state) => state.pagination);
+
+  const categories = Array.from(
+    new Set(productList.map((product) => product.category))
   );
 
-  const totalItems = productList.length;
+  const filteredItems = productList.filter(
+    (item) =>
+      (searchQuery === "" ||
+        item.title.toLowerCase().includes(searchQuery.toLowerCase())) &&
+      (selectedCategory === "" || item.category === selectedCategory)
+  );
+  const totalItems = filteredItems.length;
 
   useEffect(() => {
     dispatch(setTotalPages(Math.ceil(totalItems / itemsPerPage)));
-  }, [dispatch, totalItems, itemsPerPage]);
+  }, [dispatch, totalItems, itemsPerPage, searchQuery, selectedCategory]);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const currentItems = productList.slice(startIndex, endIndex);
+  const currentItems = filteredItems.slice(startIndex, endIndex);
 
   return (
-    <div className="max-w-[360px] min-h-screen md:max-w-5xl mx-auto flex flex-col py-6">
+    <div className="max-w-[360px] min-h-screen md:max-w-5xl mx-auto flex flex-col ">
+      <div className="block sm:hidden my-4">
+        <Search />
+      </div>
+      <CategoryFilter categories={categories} />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 ">
         {currentItems.map((product: any) => (
           <ProductCard1 product={product} key={product.id} />
