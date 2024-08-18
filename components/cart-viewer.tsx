@@ -32,7 +32,7 @@ export const CartViewer = () => {
           {/* Cart Items */}
           <div className="md:w-2/3">
             {items.map((item) => (
-              <CartItem {...item} />
+              <CartItem {...item} key={item.id} />
             ))}
           </div>
 

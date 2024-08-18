@@ -28,7 +28,9 @@ const CartButton: React.FC<ICartButton> = ({
   data,
 }) => {
   const dispatch = useAppDispatch();
-
+  const isInCart = useAppSelector((state) =>
+    state.cart.items.some((item) => item.id === data?.id)
+  );
   const handleClick = () => {
     switch (type) {
       case CartButtonTypes.ADD:
@@ -59,9 +61,6 @@ const CartButton: React.FC<ICartButton> = ({
   let buttonClass = className || "";
 
   if (type === CartButtonTypes.ADD) {
-    const isInCart = useAppSelector((state) =>
-      state.cart.items.some((item) => item.id === data.id)
-    );
     buttonText = isInCart ? "Already in Cart" : "Add to Cart";
     buttonClass = `bg-dark-blue/45 enabled:hover:bg-dark-blue enabled:hover:text-white disabled:bg-dark-blue/10 disabled:cursor-not-allowed enabled:transition-colors w-full rounded-lg py-3 px-5 ${
       className || ""
