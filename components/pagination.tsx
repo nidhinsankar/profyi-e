@@ -3,12 +3,14 @@
 import { setCurrentPage } from "@/store/paginationSlice";
 import { useAppDispatch, useAppSelector } from "@/store/store";
 
+// This component is used to implement pagination feature
 export const PaginationComponent = () => {
   const { currentPage, totalPages } = useAppSelector(
     (state) => state.pagination
   );
   const dispatch = useAppDispatch();
 
+  // this function is used to handle the changing of page numbers
   const handlePageChange = (page: number) => {
     dispatch(setCurrentPage(page));
     setTimeout(() => {
@@ -17,6 +19,8 @@ export const PaginationComponent = () => {
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }, 100);
   };
+
+  // this function renders the page number and also a function to select it
   const renderPageNumbers = () => {
     const pageNumbers = [];
     for (let i = 1; i <= totalPages; i++) {

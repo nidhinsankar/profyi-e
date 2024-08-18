@@ -5,6 +5,7 @@ interface CategoryFilterProps {
   categories: string[];
 }
 
+// This component is used to render the select tag which displays different types of categories
 const CategoryFilter: React.FC<CategoryFilterProps> = ({ categories }) => {
   const dispatch = useAppDispatch();
   const selectedCategory = useAppSelector(
@@ -15,7 +16,7 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({ categories }) => {
   };
 
   return (
-    <div className="mb-4 flex justify-end">
+    <div className="mb-7 flex justify-end">
       <select
         value={selectedCategory}
         onChange={handleCategoryChange}

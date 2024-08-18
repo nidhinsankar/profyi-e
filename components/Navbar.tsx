@@ -9,22 +9,20 @@ export const Navbar = () => {
     <div className="bg-secondary/70 backdrop-blur-2xl sticky top-0 z-20 py-3">
       <nav
         className={cn(
-          "w-[90%] md:max-w-5xl mx-auto flex justify-between items-center  md:px-9  "
+          "w-[90%] md:max-w-5xl mx-auto flex justify-between items-center  "
         )}
       >
         <div>
-          <Link href={"/"}>
+          <Link href={"/"} className="flex items-center gap-3">
+            <Image
+              src={"/cart-logo.svg"}
+              width={20}
+              height={20}
+              alt="profyi-e"
+            />
             <h2 className="font-bold text-xl ">
               Pro<span className="text-primary">fyi</span>-e
             </h2>
-            {/* <Image
-            src={"/Profyi-e.png"}
-            width={50}
-            height={50}
-            className="w-24 h-24"
-            objectFit="cover"
-            alt="profyi-e"
-          /> */}
           </Link>
         </div>
         <div className="flex items-center gap-4">
@@ -33,7 +31,7 @@ export const Navbar = () => {
           </div>
           <Link
             href={"/cart"}
-            className=" mx-2 w-10 h-10 rounded-xl flex justify-center items-center relative bg-dark-blue"
+            className=" mx-2 w-10 h-10 rounded-xl flex justify-center items-center relative bg-dark-blue/20 hover:bg-dark-blue/45"
           >
             <Image
               src={"/cart.svg"}

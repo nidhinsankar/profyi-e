@@ -5,6 +5,7 @@ interface StarRatingProps {
   maxRating?: number;
 }
 
+// This components renders the star based on rating of the product
 const StarRating: React.FC<StarRatingProps> = ({ rating, maxRating = 5 }) => {
   return (
     <div className="flex items-center">
@@ -22,7 +23,7 @@ const StarRating: React.FC<StarRatingProps> = ({ rating, maxRating = 5 }) => {
 interface StarProps {
   fillPercentage: number;
 }
-
+// Single star component changes color based on values
 const Star: React.FC<StarProps> = ({ fillPercentage }) => {
   return (
     <div className="relative w-6 h-6">

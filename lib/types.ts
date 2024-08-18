@@ -24,3 +24,12 @@ export interface IDiscountCoupon {
   setSelectedCoupon: Dispatch<SetStateAction<string>>;
   selectedCoupon: string;
 }
+
+export enum CartButtonTypes {
+  ADD = "add",
+  INCREASE = "increase",
+  DECREASE = "decrease",
+  REMOVE = "remove",
+  CLEAR = "clear",
+  PROCEED = "proceed",
+}

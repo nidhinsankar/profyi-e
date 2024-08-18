@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PROFYI-ECART
 
-## Getting Started
+## TECH STACK
 
-First, run the development server:
+- NEXTJS
+- TAILWINDCSS
+- REDUXJS/TOOLKIT
+- REACT-HOT-TOAST
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## FEATURES
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Implemented API fetching functionality by fetching the data from (fake-store) api and listed the products in the Home Page
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Integrated reduxjs/toolkit to manage the cart state and pagination,filter logics
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Implemented "Add to Cart" functionality and a toast to confirm item addition into the cart
 
-## Learn More
+- Created a separate cart page for the user to manage the cart items ,to apply discount card,calculating total price
 
-To learn more about Next.js, take a look at the following resources:
+- A cart icon on the navbar to act as a link to the cart page and also display the total number of cart items added
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Implemented category and search filter features in the product listing page
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- For the search filter i have implemented debouncing to minimize the number of dispatch to the filter logic
 
-## Deploy on Vercel
+- Implemented discount feature for fixed and percent discount
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Implemented pagination for displaying only 10 products in a page or else the products number can be changed
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- created dynamic star to display the rating
+
+- created single cart-button component to make it reusable for all operations of cart like add , remove, increase quantity, decrease quantity, clear the cart instead of creating separate buttons for these functionalities
+
+- created Reusable cart item and product card component

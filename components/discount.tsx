@@ -11,6 +11,7 @@ import { useAppDispatch, useAppSelector } from "@/store/store";
 import Image from "next/image";
 import React, { Dispatch, SetStateAction, useState } from "react";
 
+// This component is used to different types of discount coupon code and select it
 export const DiscountSelect = () => {
   const total = useAppSelector(calculateTotalPrice);
   const [selectedCoupon, setSelectedCoupon] = useState("");
@@ -34,6 +35,7 @@ export const DiscountSelect = () => {
   );
 };
 
+// This component is used to render details about single discount coupon and also select it.
 const DiscountCoupon: React.FC<IDiscountCoupon> = ({
   code,
   discountType,

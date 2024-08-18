@@ -4,11 +4,13 @@ import { setSearchQuery } from "@/store/paginationSlice";
 import { useAppDispatch, useAppSelector } from "@/store/store";
 import { ChangeEvent, useEffect, useState } from "react";
 
+// This component is used to implement the search functionality feature
 const Search = () => {
   const dispatch = useAppDispatch();
   const searchQuery = useAppSelector((state) => state.pagination.searchQuery);
   const [query, setQuery] = useState("");
 
+  // This useEffect handles debouncing of the search query
   useEffect(() => {
     const timer = setTimeout(() => {
       dispatch(setSearchQuery(query));
